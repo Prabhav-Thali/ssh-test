@@ -1,7 +1,4 @@
-language: go
-
-go:
-- 1.12.8
+language: bash
 
 os: linux
 dist: focal
@@ -21,4 +18,3 @@ jobs:
        git add .
        git commit -m "new file"
        git push origin master
-    
