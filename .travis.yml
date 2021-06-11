@@ -1,0 +1,24 @@
+language: go
+
+go:
+- 1.12.8
+
+os: linux
+dist: focal
+
+git:
+  depth: false
+
+install: skip
+
+jobs:
+  include:
+   - stage: Create file
+     if: type = push
+     script:
+     - |
+       echo "Hello" > Hello.txt
+       git add .
+       git commit -m "new file"
+       git push origin master
+    
